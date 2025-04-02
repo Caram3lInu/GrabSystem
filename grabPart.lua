@@ -6,15 +6,14 @@ end
 
 
 local rS = game:GetService("RunService")
+local reS = game:GetService("ReplicatedStorage")
 local cS = game:GetService("CollectionService")
 
-local grab = rS.Events.Player.Grab
-local drop = rS.Events.Player.Drop
-local weld = rS.Events.Player.Weld
-local unweld = rS.Events.Player.UnWeld
-
---changed back to game.replicatedstorage to avoid queue exhaustion
-local lookvector = game.ReplicatedStorage.Events.Player.LookVector
+local grab = reS.Events.Player.Grab
+local drop = reS.Events.Player.Drop
+local weld = reS.Events.Player.Weld
+local unweld = reS.Events.Player.UnWeld
+local lookvector = reS.Events.Player.LookVector
 
 local weldparams = OverlapParams.new()
 weldparams.FilterType = Enum.RaycastFilterType.Include
