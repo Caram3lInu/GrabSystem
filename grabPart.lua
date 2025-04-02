@@ -12,7 +12,9 @@ local grab = rS.Events.Player.Grab
 local drop = rS.Events.Player.Drop
 local weld = rS.Events.Player.Weld
 local unweld = rS.Events.Player.UnWeld
-local lookvector = rS.Events.Player.LookVector
+
+--changed back to game.replicatedstorage to avoid queue exhaustion
+local lookvector = game.ReplicatedStorage.Events.Player.LookVector
 
 local weldparams = OverlapParams.new()
 weldparams.FilterType = Enum.RaycastFilterType.Include
